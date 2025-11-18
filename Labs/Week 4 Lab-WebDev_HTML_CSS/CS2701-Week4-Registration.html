@@ -9,16 +9,22 @@
     <body>
         <header></header>
         <nav>
+            <ul class = navlist>
+                <li><a href="/Home">Home</a></li>
+                <li><a href="/Register">Register</a></li>
+                <li><a href="/Login">Login</a></li>
+                <li><a href="/Help">Help</a></li>
             <!-- ToDo: An unordered list to represent the menu, 
                        each list item should correspond to the menu items (Home, Register, Login, Help)
                        The css class of the menu is "navlist"
                        Check lecture slides about lists, an example of a more basic menu, and CSS class selector-->
-            <ul class="navlist">
             </ul>
          </nav>
         <main>
+            <aside> </aside>
             <!-- Check Week 4 Lecture to learn about HTML5 semantic elements-->
             <aside>
+                <input type="text" class="search" id="search" name="search" placeholder="Search"><br>
             </aside>
             <section>
                 <form class="center" novalidate>
@@ -33,12 +39,29 @@
                            and how to create a button that would react to a click Event
                         -->
                     <!-- Example given for user type checkboxes-->
+                    <label for = "name">Name:</label><br>
+                    <input type = "text" id = "name" name = "name" required><br><br>
+        
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
+
+                    <label for="password">Re-type password:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
                     
                     <input type="checkbox" id="buyer" name="buyer" value="buyer">
                     <label for="buyer">I want to buy produce directly from allotment owners.</label><br>
+                    
                     <input type="checkbox" id="seller" name="seller" value="seller">
                     <label for="seller">I want to sell produce from my allotment.</label><br><br>
 
+                    <input type="checkbox" id="tos" name="tos" value="tos" required> 
+                    <label for="tos">I agree to the </label> <a href = "#" id = "toslink">Terms of Use</a> and <a href = "#" id = "toslink">Privacy Policy</a></label><br><br>
+
+                    <button type="submit" id="registerButton">Register</button>
+                    <a href="#" id="learnMoreLink">Learn more</a>
                     <br><br>
                 </form>
                 <div class="center" id="hiddenSection">

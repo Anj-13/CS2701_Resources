@@ -3,6 +3,7 @@ body{
     max-width: 75rem;
     margin: auto;
     height: 100vh;
+    /*text-align: center; */
 }
 
 header{
@@ -49,8 +50,16 @@ ul.navlist li a:hover {
 /**** Styling for main part */
 
 main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*-------------------------*/
     border-bottom: 0.5rem solid;
     box-sizing: border-box;
+    /*-------------------------*/
+    width: 100%;
+    min-height: 100%;
+    height: auto;
     /*ToDo: Make this a flexible container; 
     You can find the following helpful: display, flex-wrap, width, min-height, height
     See lecture slides*/
@@ -65,12 +74,17 @@ section, aside {
 aside {
     /*ToDo: Set width.ToDo: For fluid layouts, use min-width, max-width, and set to relative 
    values, like 25% of the page.*/ 
+    width: 25%;
+    min-width: 180px;
+   /*-------------------------*/
     background-color: #deded8;
 }
 
 section {
     /*ToDo: Set width. For fluid layouts, use min-width, max-width, and set to relative 
    values, like 75% of the page.*/
+    min-width: 350px;
+    width: 75%;
 }
 
 /*Styling for search in aside*/
@@ -84,6 +98,10 @@ section {
     /*ToDo: Styling for centered elements
     You can use margin, width useful to center.
     */
+    /*-------------------------*/
+    margin: auto;
+    width: 50%;
+    /*-------------------------*/
     border: 3px solid green;
     padding: 10px;
   }
@@ -99,11 +117,11 @@ section {
 @media screen and (max-width: 700px) {
     /* ToDo: Style aside and section so that they take 100% width on small screens*/
     aside {
-    
+    min-width: 100%;
     }
     
     section {
- 
+    flex-direction: column;
     }
 
     #hiddenSection{
